@@ -1,6 +1,6 @@
 # NOTICE
 
-`dsh-matt-pocock-skills` is a DeepSeek Harness integration for a third-party skills repository.
+`@powefuled/dsh-matt-pocock-skills` is a DeepSeek Harness integration for a third-party skills repository.
 
 ## Upstream
 

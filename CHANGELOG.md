@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `dsh-matt-pocock-skills` are documented here.
+All notable changes to `@powefuled/dsh-matt-pocock-skills` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -34,4 +34,4 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
   `cordis.patch.yml`.
 - 40 unit tests plus an end-to-end smoke script that syncs the real upstream repository.
 
-[0.1.0]: https://www.npmjs.com/package/dsh-matt-pocock-skills/v/0.1.0
+[0.1.0]: https://www.npmjs.com/package/@powefuled/dsh-matt-pocock-skills/v/0.1.0

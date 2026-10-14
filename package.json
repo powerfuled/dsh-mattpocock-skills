@@ -1,5 +1,5 @@
 {
-  "name": "dsh-matt-pocock-skills",
+  "name": "@powefuled/dsh-matt-pocock-skills",
   "version": "0.1.0",
   "description": "DeepSeek Harness plugin that mirrors Matt Pocock's agent skills (github.com/mattpocock/skills) into DSH as mp-* skills, with background sync, per-skill toggles and manual sync/management tools.",
   "type": "module",

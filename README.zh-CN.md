@@ -1,4 +1,4 @@
-# dsh-matt-pocock-skills
+# @powefuled/dsh-matt-pocock-skills
 
 把 **[Matt Pocock 的 agent skills](https://github.com/mattpocock/skills)** 镜像进 DeepSeek Harness，
 并与上游仓库保持同步的 DSH 插件。
@@ -30,7 +30,7 @@
 ### 从 npm 安装（推荐）
 
 ```bash
-dsh plugin --profile <profile> add dsh-matt-pocock-skills
+dsh plugin --profile <profile> add @powefuled/dsh-matt-pocock-skills
 ```
 
 也可以直接在 DSH 的插件管理界面 / 插件市场里安装。本包自带 bundle patch，挂载是自动的。
@@ -43,7 +43,7 @@ dsh plugin --profile <profile> add dsh-matt-pocock-skills
 ```yaml
 - insert:
     - id: mattpocock-skills
-      name: dsh-matt-pocock-skills
+      name: '@powefuled/dsh-matt-pocock-skills'
       config:
         syncIntervalHours: 12
 ```
@@ -64,7 +64,7 @@ dsh plugin --profile <profile> add dsh-matt-pocock-skills
 
 ```yaml
 - id: mattpocock-skills
-  name: dsh-matt-pocock-skills
+  name: '@powefuled/dsh-matt-pocock-skills'
   config:
     categories: ["engineering"]
     disabledSkills: ["retro"]
