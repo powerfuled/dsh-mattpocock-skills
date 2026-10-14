@@ -4,6 +4,14 @@ All notable changes to `@powefuled/dsh-matt-pocock-skills` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] — 2026-10-14
+
+### Fixed
+
+- `MattpocockSkillProvider` no longer throws when it is constructed without a `sync` engine or a
+  logger: an unattached provider now serves the existing mirror read-only, and a missing logger
+  falls back to a no-op instead of turning a recoverable discovery failure into a `TypeError`.
+
 ## [0.1.0] — 2026-10-14
 
 ### Added
@@ -34,4 +42,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
   `cordis.patch.yml`.
 - 40 unit tests plus an end-to-end smoke script that syncs the real upstream repository.
 
+[0.1.1]: https://www.npmjs.com/package/@powefuled/dsh-matt-pocock-skills/v/0.1.1
 [0.1.0]: https://www.npmjs.com/package/@powefuled/dsh-matt-pocock-skills/v/0.1.0

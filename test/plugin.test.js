@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 
-import { Config, apply, inject, name } from '../lib/index.js';
+import { Config, MattpocockSkillProvider, apply, inject, name } from '../lib/index.js';
 import { SkillStore } from '../lib/store.js';
 import { createFakeContext, skillDoc } from './helpers.js';
 
@@ -123,6 +123,20 @@ test('lists prefixed candidates from the mirror and rewrites skill references', 
   assert.match(definition.content, /"hello"/, 'unrelated quoted words are left alone');
   assert.match(definition.content, /\[tests\.md\]\(tests\.md\)/, 'sibling links stay relative');
   assert.equal(await provider.get({ name: 'mp-tdd' }), undefined, 'a candidate without a locator is rejected');
+});
+
+test('serves an existing mirror without a sync engine or a logger', async () => {
+  const { config, store } = await seedMirror();
+  const provider = new MattpocockSkillProvider({ config, store });
+
+  const { candidates, complete } = await provider.list({});
+  assert.equal(complete, true, 'a missing sync engine must not turn discovery into a failure');
+  assert.deepEqual(
+    candidates.map((candidate) => candidate.name),
+    ['mp-tdd', 'mp-codebase-design'],
+  );
+  const definition = await provider.get(candidates[0]);
+  assert.match(definition.content, /"mp-codebase-design"/);
 });
 
 test('honours a custom name prefix and lets it be disabled', async () => {
