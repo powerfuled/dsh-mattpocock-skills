@@ -1,0 +1,13 @@
+# @powerfuled/dsh-mattpocock-skills bundle patch
+#
+# 供 `dsh plugin --profile <profile> add <包名>` 自动挂载（Loader bundle 层）。
+# 手动挂载的用户也可在 profiles/<profile>/cordis.patch.yml 自行添加同样的 insert 条目。
+#
+# 组件配置请写在 profiles/<profile>/cordis.patch.yml 中，用 id 覆盖：
+#   - id: mattpocock-skills
+#     config:
+#       syncIntervalHours: 6
+#       disabledSkills: ['wizard']
+- insert:
+    - id: mattpocock-skills
+      name: '@powerfuled/dsh-mattpocock-skills'
