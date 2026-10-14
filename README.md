@@ -1,4 +1,4 @@
-# dsh-mattpocock-skills
+# dsh-matt-pocock-skills
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/dsh) plugin that mirrors
 **[Matt Pocock's agent skills](https://github.com/mattpocock/skills)** into DSH and keeps them in sync
@@ -36,7 +36,7 @@ with the upstream repository.
 ### From npm (recommended)
 
 ```bash
-dsh plugin --profile <profile> add dsh-mattpocock-skills
+dsh plugin --profile <profile> add dsh-matt-pocock-skills
 ```
 
 Or install it from the DSH plugin manager / plugin market UI. The package declares a bundle patch, so
@@ -50,7 +50,7 @@ layer, `~/.dsh/profiles/<profile>/cordis.patch.yml`:
 ```yaml
 - insert:
     - id: mattpocock-skills
-      name: dsh-mattpocock-skills
+      name: dsh-matt-pocock-skills
       config:
         syncIntervalHours: 12
 ```
@@ -73,7 +73,7 @@ All options are optional and live on the plugin's own entry in
 
 ```yaml
 - id: mattpocock-skills
-  name: dsh-mattpocock-skills
+  name: dsh-matt-pocock-skills
   config:
     categories: ["engineering"]
     disabledSkills: ["retro"]
